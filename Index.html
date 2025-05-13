@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Logo1.png" alt="Currency Converter Logo">
+            </div>
+            <nav>
+                <ul style="display: flex; gap: 20px; list-style: none; margin: 0 auto; padding: 0; justify-content: center;"> 
+                    <li><a href="#" class="nav-link" data-page="home" style="text-decoration: none;">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="converter" style="text-decoration: none;">Converter</a></li>
+                    <li><a href="#" class="nav-link" data-page="about" style="text-decoration: none;">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact" style="text-decoration: none;">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <span class="moon-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home-section" class="page-section active-section">
+            <div class="hero">
+                <div class="container">
+                    <h1>The world's trusted<br>currency authority</h1>
+                    <p>Converting money has never been easier</p>
+                    <a href="#" class="btn primary-btn" id="get-started-btn">Get started</a>
+                </div>
+            </div>
+
+            <section class="features" id="feature">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h2>Convert currencies</h2>
+                        <p>View accurate rates for over 170 currencies</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h2>Live Graphs</h2>
+                        <p>Check live exchange rates View accurate rates for over 170 currencies</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h2>Get our free app</h2>
+                        <p>Stay up to date with alerts Access our currency data and track rates on the go</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news">
+                <div class="container">
+                    <h2>Currency news and analysis</h2>
+                    <p>The latest stories and market updates from out expert analyst</p>
+                </div>
+            </section>
+        </section>
+
+        <section id="converter-section" class="page-section">
+            <div class="converter-section">
+                <div class="container">
+                    <div class="logo-large">
+                        <img src="Logo1.png" alt="Currency Converter Logo">
+                    </div>
+                    
+                    <div class="converter-form">
+                        <div class="input-group">
+                            <input type="number" id="amount" placeholder="Enter amount" class="converter-input">
+                        </div>
+                        
+                        <div class="select-group">
+                            <select id="from-currency" class="currency-select">
+                                <option value="USD">🇺🇸 United States Dollar (USD)</option>
+            <option value="EUR">🇪🇺 Euro (EUR)</option>
+            <option value="GBP">🇬🇧 British Pound (GBP)</option>
+            <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+            <option value="AUD">🇦🇺 Australian Dollar (AUD)</option>
+            <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+            <option value="CHF">🇨🇭 Swiss Franc (CHF)</option>
+            <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+            <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+            <option value="BRL">🇧🇷 Brazilian Real (BRL)</option>
+            <option value="ZAR">🇿🇦 South African Rand (ZAR)</option>
+            <option value="MXN">🇲🇽 Mexican Peso (MXN)</option>
+            <option value="RUB">🇷🇺 Russian Ruble (RUB)</option>
+            <option value="SGD">🇸🇬 Singapore Dollar (SGD)</option>
+            <option value="HKD">🇭🇰 Hong Kong Dollar (HKD)</option>
+            <option value="KRW">🇰🇷 South Korean Won (KRW)</option>
+            <option value="SEK">🇸🇪 Swedish Krona (SEK)</option>
+            <option value="NOK">🇳🇴 Norwegian Krone (NOK)</option>
+            <option value="NZD">🇳🇿 New Zealand Dollar (NZD)</option>
+            <option value="TRY">🇹🇷 Turkish Lira (TRY)</option>
+            <option value="THB">🇹🇭 Thai Baht (THB)</option>
+            <option value="IDR">🇮🇩 Indonesian Rupiah (IDR)</option>
+            <option value="MYR">🇲🇾 Malaysian Ringgit (MYR)</option>
+            <option value="PHP">🇵🇭 Philippine Peso (PHP)</option>
+            <option value="PLN">🇵🇱 Polish Zloty (PLN)</option>
+            <option value="DKK">🇩🇰 Danish Krone (DKK)</option>
+            <option value="HUF">🇭🇺 Hungarian Forint (HUF)</option>
+            <option value="CZK">🇨🇿 Czech Koruna (CZK)</option>
+            <option value="ILS">🇮🇱 Israeli Shekel (ILS)</option>
+            <option value="SAR">🇸🇦 Saudi Riyal (SAR)</option>
+            <option value="AED">🇦🇪 United Arab Emirates Dirham (AED)</option>
+            <option value="EGP">🇪🇬 Egyptian Pound (EGP)</option>
+            <option value="NGN">🇳🇬 Nigerian Naira (NGN)</option>
+            <option value="PKR">🇵🇰 Pakistani Rupee (PKR)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="select-group">
+                            <select id="to-currency" class="currency-select">
+                                <option value="USD">🇺🇸 United States Dollar (USD)</option>
+            <option value="EUR">🇪🇺 Euro (EUR)</option>
+            <option value="GBP">🇬🇧 British Pound (GBP)</option>
+            <option value="JPY">🇯🇵 Japanese Yen (JPY)</option>
+            <option value="AUD">🇦🇺 Australian Dollar (AUD)</option>
+            <option value="CAD">🇨🇦 Canadian Dollar (CAD)</option>
+            <option value="CHF">🇨🇭 Swiss Franc (CHF)</option>
+            <option value="CNY">🇨🇳 Chinese Yuan (CNY)</option>
+            <option value="INR">🇮🇳 Indian Rupee (INR)</option>
+            <option value="BRL">🇧🇷 Brazilian Real (BRL)</option>
+            <option value="ZAR">🇿🇦 South African Rand (ZAR)</option>
+            <option value="MXN">🇲🇽 Mexican Peso (MXN)</option>
+            <option value="RUB">🇷🇺 Russian Ruble (RUB)</option>
+            <option value="SGD">🇸🇬 Singapore Dollar (SGD)</option>
+            <option value="HKD">🇭🇰 Hong Kong Dollar (HKD)</option>
+            <option value="KRW">🇰🇷 South Korean Won (KRW)</option>
+            <option value="SEK">🇸🇪 Swedish Krona (SEK)</option>
+            <option value="NOK">🇳🇴 Norwegian Krone (NOK)</option>
+            <option value="NZD">🇳🇿 New Zealand Dollar (NZD)</option>
+            <option value="TRY">🇹🇷 Turkish Lira (TRY)</option>
+            <option value="THB">🇹🇭 Thai Baht (THB)</option>
+            <option value="IDR">🇮🇩 Indonesian Rupiah (IDR)</option>
+            <option value="MYR">🇲🇾 Malaysian Ringgit (MYR)</option>
+            <option value="PHP">🇵🇭 Philippine Peso (PHP)</option>
+            <option value="PLN">🇵🇱 Polish Zloty (PLN)</option>
+            <option value="DKK">🇩🇰 Danish Krone (DKK)</option>
+            <option value="HUF">🇭🇺 Hungarian Forint (HUF)</option>
+            <option value="CZK">🇨🇿 Czech Koruna (CZK)</option>
+            <option value="ILS">🇮🇱 Israeli Shekel (ILS)</option>
+            <option value="SAR">🇸🇦 Saudi Riyal (SAR)</option>
+            <option value="AED">🇦🇪 United Arab Emirates Dirham (AED)</option>
+            <option value="EGP">🇪🇬 Egyptian Pound (EGP)</option>
+            <option value="NGN">🇳🇬 Nigerian Naira (NGN)</option>
+            <option value="PKR">🇵🇰 Pakistani Rupee (PKR)</option>
+                            </select>
+                        </div>
+                        
+                        <button id="convert-btn" class="btn primary-btn">Convert</button>
+                    </div>
+                    
+                    <div id="result" class="conversion-result"></div>
+                </div>
+            </div>
+            
+            <section class="about-section">
+                <div class="container">
+                    <h2>About Us</h2>
+                    <p>We are the world's most trusted source for currency data and market analysis. Our mission is to make currency exchange easy, reliable, and accessible.</p>
+                </div>
+            </section>
+        </section>
+
+        <section id="about-section" class="page-section">
+            <div class="about-page-section">
+                <div class="container">
+                    <div class="logo-large">
+                        <img src="Logo1.png" alt="Currency Converter Logo">
+                    </div>
+                    
+                    <h2>About Us</h2>
+                    <p>We are the world's most trusted source for currency data and market analysis. Our mission is to make currency exchange easy, reliable, and accessible.</p>
+                    
+                    <div class="about-content">
+                        <h3>Our Story</h3>
+                        <p>Founded in 2025, Currency Converter has grown to become the leading platform for real-time currency conversion and exchange rate information. We serve millions of users worldwide with accurate and up-to-date currency data.</p>
+                        
+                        <h3>Our Mission</h3>
+                        <p>Our mission is to provide the most reliable, transparent, and user-friendly currency conversion service available. We believe that everyone should have access to accurate exchange rate information to make informed financial decisions.</p>
+                        
+                        <h3>Our Data</h3>
+                        <p>We source our exchange rate data from multiple reliable financial institutions and update it in real-time to ensure the highest level of accuracy. Our platform supports over 170 currencies from around the world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="page-section">
+            <div class="contact-section">
+                <div class="container">
+                    <div class="logo-large">
+                        <img src="Logo1.png" alt="Currency Converter Logo">
+                    </div>
+                    
+                    <h2>Contact Us</h2>
+                    <p>Questions or feedback? Reach out to our team!</p>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Enter Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Enter Your Email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Enter Your Message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="javascript.js"></script>
+
+    <script>
+        async function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('from-currency').value;
+            const toCurrency = document.getElementById('to-currency').value;
+
+            if (isNaN(amount)) {
+                document.getElementById('result').innerText = "Please enter a valid amount.";
+                return;
+            }
+
+            document.getElementById('result').innerText = "Fetching conversion rates...";
+            try {
+                const apiKey = '6664dc7cf26da11de3b59c1c'; // API key
+                const response = await fetch(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`);
+                const data = await response.json();
+
+                if (response.ok && data.result === "success") {
+                    const rate = data.conversion_rates[toCurrency];
+                    const convertedAmount = (amount * rate).toFixed(2);
+                    document.getElementById('result').innerText = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+                } else {
+                    document.getElementById('result').innerText = "Error fetching conversion rates.";
+                }
+            } catch (error) {
+                document.getElementById('result').innerText = "An error occurred. Please try again.";
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+</html>
